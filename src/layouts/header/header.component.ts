@@ -1,5 +1,5 @@
 import { defineComponent } from 'vue';
-import '../../assets/header.css';
+import '../../assets/styles/header.css';
 
 export default defineComponent({
     
