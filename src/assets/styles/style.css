@@ -21,3 +21,13 @@
   background-position: center;
   background-size: cover;
 }
+
+.dummy-text{
+  background-color: #EEEEEE;
+}
+
+.card{
+  width: 90%;
+  margin: auto;
+  margin-top: 50px;
+}

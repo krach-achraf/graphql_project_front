@@ -34,6 +34,7 @@ nav .content .links{
 .content .links li{
   list-style: none;
   line-height: 70px;
+  margin-top: 20px;
 }
 
 .content .links li a{
@@ -44,6 +45,7 @@ nav .content .links{
   border-radius: 5px;
   transition: all 0.3s ease;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .content .links li a:hover,
