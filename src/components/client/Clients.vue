@@ -3,12 +3,10 @@
     <div class="card">
       <div class="card-body">
         <div class="table-responsive">
-          <table class="table">
+          <table id="dtBasicExample" class="table">
             <thead>
               <tr>
-                <th scope="col">Id</th>
                 <th scope="col">CNE</th>
-                <th scope="col">Code</th>
                 <th scope="col">First name</th>
                 <th scope="col">Last name</th>
                 <th scope="col">Phone number</th>
@@ -18,39 +16,23 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>A D U</td>
+              <tr v-for="client in clients" :key="client.id">
+                <td class="td">{{client.CNE}}</td>
+                <td class="td">{{client.firstName}}</td>
+                <td class="td">{{client.lastName}}</td>
+                <td class="td">{{client.phoneNumber}}</td>
+                <td class="td">{{client.email}}</td>
+                <td class="td">{{client.dateNaissance?.toString().split("T")[0]}}</td>
+                <td>
+                  <button class="btn btn-secondary btn-sm">
+                    <fa icon="trash" size="lg"></fa>
+                    </button> 
+                  <button class="btn btn-dark btn-sm btn_edit">
+                    <fa icon="edit" size="lg"></fa>
+                    </button>
+                </td>
               </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>@fat</td>
-                <td>A D U</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-                <td>Larry</td>
-                <td>A D U</td>
-              </tr>
+           
             </tbody>
           </table>
         </div>
@@ -59,4 +41,6 @@
   </div>
 </template>
 
-<script lang="ts" src="./clients.component.ts"></script>
+<script lang="ts" src="./clients.component.ts">
+
+</script>
