@@ -24,7 +24,7 @@
                 <td class="td">{{client.email}}</td>
                 <td class="td">{{client.dateNaissance?.toString().split("T")[0]}}</td>
                 <td>
-                  <button class="btn btn-secondary btn-sm">
+                  <button class="btn btn-secondary btn-sm" v-on:click="prepareToRemove(client.id)">
                     <fa icon="trash" size="lg"></fa>
                     </button> 
                   <button class="btn btn-dark btn-sm btn_edit">
@@ -41,6 +41,4 @@
   </div>
 </template>
 
-<script lang="ts" src="./clients.component.ts">
-
-</script>
+<script lang="ts" src="./clients.component.ts"></script>

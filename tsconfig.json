@@ -3,6 +3,9 @@
   "compilerOptions":{
     "importsNotUsedAsValues": "error" 
   },
+  "types": [
+    "vue-sweetalert2"
+  ],
   "references": [
     {
       "path": "./tsconfig.config.json"

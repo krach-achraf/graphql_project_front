@@ -26,9 +26,25 @@ export default class ClientService {
             `,
         },
       })
-        .then((response) => resolve(response.data))
-        .catch((error) => reject(error));
+      .then((response) => resolve(response.data))
+      .catch((error) => reject(error));
     });
   }
 
+  public delete(id: number): Promise<any>{
+    return new Promise<any>((resolve, reject) =>{
+      axios({
+        url: baseUrl,
+        method: "post",
+        data:{
+          query: `
+                mutation {
+                  deleteClient(id: ${id})
+                }`
+        }
+      })
+      .then((response) => resolve(response.data))
+      .catch((error) => reject(error));
+    })
+  }
 }
